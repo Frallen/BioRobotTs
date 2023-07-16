@@ -2,12 +2,12 @@
   <div>
     <Error v-if="isError"></Error>
     <div v-else class="container">
+      <Navigation></Navigation>
       <router-view v-slot="{ Component }">
         <suspense>
           <component :is="Component"/>
         </suspense>
       </router-view>
-      <Navigation></Navigation>
     </div>
   </div>
 </template>
@@ -15,6 +15,6 @@
 const {isError} = storeToRefs(useMain())
 
 </script>
-<style lang="less">
+<style lang="scss">
 
 </style>

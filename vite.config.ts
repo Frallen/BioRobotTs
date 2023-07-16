@@ -3,8 +3,10 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from "unplugin-vue-components/vite"
 import * as path from "path";
+import VitePluginSVGSpritemap from '@spiriit/vite-plugin-svg-spritemap'
 
 // https://vitejs.dev/config/
+
 export default defineConfig({
     server: {
         port: 3000
@@ -16,6 +18,11 @@ export default defineConfig({
     },
     plugins: [
         vue(),
+        VitePluginSVGSpritemap('./src/assets/svg/*.svg',{
+            output:{
+                filename:"[name][extname]"
+            }
+        }),
         Components({
             dirs: ['./src/components',"./src/pages"],
             dts: true
@@ -46,8 +53,8 @@ export default defineConfig({
     ],
     css: {
         preprocessorOptions: {
-            less: {
-                additionalData: `@import "@/assets/styles/_var.less" ;@import "@/assets/styles/_mixins.less" ;`,
+            scss: {
+                additionalData: `@import "@/assets/styles/_var.scss" ;@import "@/assets/styles/_mixins.scss" ;`,
             },
         },
     },

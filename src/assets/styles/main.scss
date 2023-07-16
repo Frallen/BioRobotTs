@@ -5,11 +5,12 @@
 
 html {
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   overflow-x: hidden;
+  background: radial-gradient(82.33% 70.44% at 50.00% 0%, #26394D 0%, #212529 100%) no-repeat;
 }
 
 h1,
@@ -20,6 +21,77 @@ h5,
 h6 {
   padding: 0;
   margin: 0;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3.500em;
+  font-weight: 600;
+  line-height: 72px;
+  @media #{$lg}{
+    font-size: 3em;
+    line-height: 56px
+  }
+  @media #{$md}{
+    font-size: 2em;
+    line-height: 56px
+  }
+  @media #{$xs}{
+    font-size: 1.750em;
+    line-height: 32px
+  }
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 40px;
+  @media #{$lg}{
+    font-size: 1.5em;
+    line-height: 32px
+  }
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 32px;
+  @media #{$lg}{
+    font-size: 18px;
+    line-height: 24px
+  }
+}
+
+.info-text, .text, .medium-text, .second-text {
+  color: #fff;
+}
+
+.info-text {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+  @media #{$lg}{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.medium-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.second-text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
 }
 
 .fade-enter-active,
@@ -33,18 +105,76 @@ h6 {
 }
 
 .container {
-  padding: 0 10vw;
-  @media #{$xxl} {
-    padding: 0 7vw;
+  padding: 0 calc((100vw - 1016px) / 2);
+  @media #{$md} {
+    padding: 0 2vw;
   }
 
-  @media #{$lg} {
-    padding: 0 1.3em;
-  }
-  @media #{$md} {
-    padding: 0 1em;
-  }
   @media #{$sm} {
-    padding: 0 0.5em;
+    padding: 0 1vw;
   }
+  /*  @media #{$md} {
+      padding: 0 1em;
+    }
+    @media #{$sm} {
+      padding: 0 0.5em;
+    }*/
+}
+
+.button {
+  border: 1px solid transparent;
+  padding: 11px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+  @include trs(0.3s);
+  @include br(60px);
+  background: transparent;
+}
+
+.button-normal {
+  border: 1px solid $orange;
+}
+
+.button-orange {
+  background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+}
+
+.button-orange-active {
+  background: $light_orange;
+}
+
+.button-orange-disable {
+  color: #7D90A6;
+  background: $gray;
+}
+
+.button-orange:hover, .button-normal:hover {
+  background: $orange;
+  @include trs(0.3s);
+}
+
+.button-blue {
+  color: $blue;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.16);
+  border: 1px solid $blue;
+}
+
+.button-blue:hover {
+  box-shadow: 0px 10px 40px 0px #1E5466;
+  @include trs(0.3s);
+  color: $black;
+  background: $blue;
+}
+
+.button-blue-disable {
+  color: $gray;
+  background: transparent;
+  border: 1px solid $gray;
 }

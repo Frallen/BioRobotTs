@@ -1,11 +1,12 @@
+<template>
+
+</template>
+
 <script setup lang="ts">
 
 </script>
 
-<template>
-<div>gg</div>
-</template>
+<style scoped lang="scss">
 
-<style scoped lang="less">
 
 </style>
