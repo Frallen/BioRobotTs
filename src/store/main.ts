@@ -13,6 +13,9 @@ export const useMain = defineStore('main', {
     getters: {
         svgResolved(state){
             return (query:string)=>state.isProd?`/assets/spritemap.svg#${query}`:`__spritemap#${query}`
+        },
+        svgImageResolved(state){
+            return (query:string)=>state.isProd?`/assets/spritemap.svg#${query}-view`:`__spritemap#${query}-view`
         }
     },
     actions: {

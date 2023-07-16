@@ -16,12 +16,9 @@
           <h3>класса «монитор-кресло»</h3>
         </div>
         <div class="header-img">
-          <svg width="176px" height="309px">
-            <use :xlink:href="svgResolved('sprite-FrontMale')"></use>
-          </svg>
-          <svg width="138px" height="195px">
-            <use :xlink:href="svgResolved('sprite-DesignerMale')"></use>
-          </svg>
+
+          <img :src="svgImageResolved('sprite-DesignerMale')" />
+          <img :src="svgImageResolved('sprite-FrontMale')" />
         </div>
       </div>
     </div>
@@ -29,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-const {svgResolved} = storeToRefs(useMain())
+const {svgResolved,svgImageResolved} = storeToRefs(useMain())
 </script>
 
 <style scoped lang="scss">
