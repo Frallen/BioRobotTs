@@ -1,0 +1,50 @@
+@import "modern-normalize/modern-normalize.css";
+@import "_var";
+@import "_mixins";
+@import "_fonts";
+
+html {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.container {
+  padding: 0 10vw;
+  @media #{$xxl} {
+    padding: 0 7vw;
+  }
+
+  @media #{$lg} {
+    padding: 0 1.3em;
+  }
+  @media #{$md} {
+    padding: 0 1em;
+  }
+  @media #{$sm} {
+    padding: 0 0.5em;
+  }
+}
