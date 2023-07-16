@@ -2,7 +2,7 @@
   <div class="nav">
     <div class="nav-logo">
       <svg>
-        <use :xlink:href="isProd?'#Logo':'__spritemap#sprite-Logo'"></use>
+        <use :xlink:href="isProd?'/assets/spritemap.svg#sprite-Logo':'__spritemap#sprite-Logo'"></use>
       </svg>
     </div>
     <button class="button button-normal">Произвести биоробота</button>

@@ -1,6 +1,6 @@
 <template>
   <svg>
-    <use :xlink:href="`svg/#${Name}`"></use>
+    <use :xlink:href="`/svg/#${Name}`"></use>
   </svg>
 </template>
 <script setup lang="ts">
