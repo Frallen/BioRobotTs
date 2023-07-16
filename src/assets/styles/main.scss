@@ -178,3 +178,25 @@ h3 {
   background: transparent;
   border: 1px solid $gray;
 }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #667380;
+  &-number {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+
+  &-next {
+    span {
+      display: block;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+  }
+}
